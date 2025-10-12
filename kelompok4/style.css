@@ -1,0 +1,300 @@
+/* Reset default styling browser - menghilangkan margin, padding, dan mengatur box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling untuk body/halaman utama */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang digunakan */
+    background: linear-gradient(135deg, #d4b5a0 0%, #c9a88a 100%); /* Gradient background dari coklat muda ke coklat gelap */
+    min-height: 100vh; /* Minimum tinggi halaman 100% viewport height */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Menempatkan konten di tengah secara horizontal */
+    align-items: center; /* Menempatkan konten di tengah secara vertikal */
+    padding: 20px; /* Padding di sekeliling body */
+}
+
+/* Container utama untuk seluruh konten */
+.container {
+    background: rgba(227, 204, 188, 0.6); /* Background semi-transparan warna krem */
+    border-radius: 30px; /* Sudut melengkung */
+    padding: 60px 40px; /* Padding dalam container (atas-bawah 60px, kiri-kanan 40px) */
+    max-width: 1000px; /* Lebar maksimum container */
+    width: 100%; /* Lebar 100% dari parent */
+    text-align: center; /* Teks rata tengah */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek depth */
+}
+
+/* Badge/icon error 404 berbentuk lingkaran */
+.error-badge {
+    background: #2c2c2c; /* Background hitam gelap */
+    width: 200px; /* Lebar badge */
+    height: 200px; /* Tinggi badge */
+    border-radius: 50%; /* Membuat bentuk lingkaran sempurna */
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Menempatkan gambar di tengah vertikal */
+    justify-content: center; /* Menempatkan gambar di tengah horizontal */
+    margin: 0 auto 20px; /* Margin atas 0, kiri-kanan auto (tengah), bawah 20px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek depth */
+    overflow: hidden; /* Memotong gambar yang keluar dari lingkaran */
+}
+
+/* Styling untuk gambar di dalam error badge */
+.error-badge img {
+    width: 100%; /* Lebar gambar 100% dari parent */
+    height: 100%; /* Tinggi gambar 100% dari parent */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+}
+
+/* Styling untuk heading utama (h1) */
+h1 {
+    color: #2c2c2c; /* Warna teks hitam gelap */
+    font-size: 32px; /* Ukuran font */
+    margin-bottom: 10px; /* Jarak ke elemen di bawahnya */
+}
+
+/* Styling untuk subtitle/tagline */
+.subtitle {
+    color: #5a5a5a; /* Warna teks abu-abu */
+    font-style: italic; /* Teks miring */
+    margin-bottom: 40px; /* Jarak ke elemen di bawahnya */
+    font-size: 16px; /* Ukuran font */
+}
+
+/* Styling untuk heading level 2 (h2) */
+h2 {
+    color: #2c2c2c; /* Warna teks hitam gelap */
+    font-size: 28px; /* Ukuran font */
+    margin-bottom: 40px; /* Jarak ke elemen di bawahnya */
+    font-weight: 600; /* Ketebalan font semi-bold */
+}
+
+/* Grid container untuk kartu anggota tim */
+.team-grid {
+    display: grid; /* Menggunakan CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar sama */
+    gap: 20px; /* Jarak antar kartu */
+    max-width: 800px; /* Lebar maksimum grid */
+    margin: 0 auto; /* Menempatkan grid di tengah */
+}
+
+/* Styling dasar untuk kartu anggota tim */
+.team-card {
+    border-radius: 20px; /* Sudut melengkung */
+    padding: 30px 20px; /* Padding dalam kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi smooth untuk hover effect */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+}
+
+/* Efek hover pada kartu tim - terangkat ke atas dengan bayangan lebih besar */
+.team-card:hover {
+    transform: translateY(-5px); /* Mengangkat kartu 5px ke atas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+/* Variasi warna background untuk setiap kartu - warna mint hijau */
+.team-card.mint {
+    background: rgba(188, 224, 220, 0.8);
+}
+
+/* Warna kuning */
+.team-card.yellow {
+    background: rgba(255, 244, 186, 0.8);
+}
+
+/* Warna biru */
+.team-card.blue {
+    background: rgba(207, 226, 243, 0.8);
+}
+
+/* Warna pink */
+.team-card.pink {
+    background: rgba(255, 218, 231, 0.8);
+}
+
+/* Warna ungu */
+.team-card.purple {
+    background: rgba(221, 210, 243, 0.8);
+}
+
+/* Warna peach */
+.team-card.peach {
+    background: rgba(255, 228, 210, 0.8);
+}
+
+/* Container avatar berbentuk lingkaran */
+.avatar {
+    width: 120px; /* Lebar avatar */
+    height: 120px; /* Tinggi avatar */
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    margin: 0 auto 15px; /* Margin tengah dengan jarak bawah 15px */
+    background: white; /* Background putih */
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Menempatkan gambar di tengah vertikal */
+    justify-content: center; /* Menempatkan gambar di tengah horizontal */
+    overflow: hidden; /* Memotong gambar yang keluar dari lingkaran */
+}
+
+/* Styling untuk gambar di dalam avatar */
+.avatar img {
+    width: 100%; /* Lebar gambar 100% dari parent */
+    height: 100%; /* Tinggi gambar 100% dari parent */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+}
+
+/* Styling untuk nama anggota tim (h3 di dalam kartu) */
+.team-card h3 {
+    color: #2c2c2c; /* Warna teks hitam gelap */
+    font-size: 20px; /* Ukuran font */
+    margin-bottom: 5px; /* Jarak ke elemen di bawahnya */
+    font-weight: 600; /* Ketebalan font semi-bold */
+}
+
+/* Styling untuk posisi/role anggota tim (paragraf di dalam kartu) */
+.team-card p {
+    color: #4a4a4a; /* Warna teks abu-abu gelap */
+    font-size: 14px; /* Ukuran font */
+}
+
+/* Styling untuk tombol CTA (Call-to-Action) */
+.cta-button {
+    margin-top: 40px; /* Jarak atas dari elemen sebelumnya */
+    background: #2c2c2c; /* Background hitam gelap */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border default */
+    padding: 15px 40px; /* Padding dalam tombol */
+    border-radius: 50px; /* Sudut sangat melengkung untuk efek pill */
+    font-size: 16px; /* Ukuran font */
+    font-weight: 600; /* Ketebalan font semi-bold */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+    transition: all 0.3s ease; /* Animasi smooth untuk semua perubahan */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek depth */
+}
+
+/* Efek hover pada tombol - warna lebih gelap dengan terangkat ke atas */
+.cta-button:hover {
+    background: #1a1a1a; /* Background lebih gelap saat hover */
+    transform: translateY(-2px); /* Mengangkat tombol 2px ke atas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+}
+
+/* Efek saat tombol ditekan - kembali ke posisi normal */
+.cta-button:active {
+    transform: translateY(0); /* Mengembalikan posisi tombol */
+}
+
+/* Styling untuk popup modal (overlay penuh layar) */
+.popup {
+    display: none; /* Disembunyikan secara default */
+    position: fixed; /* Posisi tetap relatif terhadap viewport */
+    z-index: 1000; /* Z-index tinggi agar berada di atas semua elemen */
+    left: 0; /* Posisi dari kiri */
+    top: 0; /* Posisi dari atas */
+    width: 100%; /* Lebar penuh layar */
+    height: 100%; /* Tinggi penuh layar */
+    background: rgba(0, 0, 0, 0.5); /* Background gelap semi-transparan */
+    justify-content: center; /* Menempatkan konten di tengah horizontal */
+    align-items: center; /* Menempatkan konten di tengah vertikal */
+    animation: fadeIn 0.3s ease; /* Animasi fade in saat muncul */
+}
+
+/* Keyframe animasi untuk fade in popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Mulai dari transparan */
+    }
+    to {
+        opacity: 1; /* Berakhir dengan opacity penuh */
+    }
+}
+
+/* Konten popup (kotak putih di tengah) */
+.popup-content {
+    background: white; /* Background putih */
+    padding: 40px; /* Padding dalam konten popup */
+    border-radius: 20px; /* Sudut melengkung */
+    max-width: 500px; /* Lebar maksimum popup */
+    width: 90%; /* Lebar 90% dari viewport untuk responsif */
+    position: relative; /* Posisi relative untuk positioning tombol close */
+    text-align: center; /* Teks rata tengah */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek depth */
+    animation: slideUp 0.3s ease; /* Animasi slide up saat muncul */
+}
+
+/* Keyframe animasi untuk slide up popup */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px); /* Mulai dari 50px di bawah */
+        opacity: 0; /* Mulai dari transparan */
+    }
+    to {
+        transform: translateY(0); /* Berakhir di posisi normal */
+        opacity: 1; /* Berakhir dengan opacity penuh */
+    }
+}
+
+/* Tombol close (X) di popup */
+.close-btn {
+    position: absolute; /* Posisi absolute relatif terhadap popup-content */
+    right: 20px; /* Jarak dari kanan */
+    top: 15px; /* Jarak dari atas */
+    font-size: 30px; /* Ukuran font besar */
+    font-weight: bold; /* Ketebalan font bold */
+    color: #999; /* Warna abu-abu terang */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+    transition: color 0.3s ease; /* Animasi smooth untuk perubahan warna */
+}
+
+/* Efek hover pada tombol close - warna lebih gelap */
+.close-btn:hover {
+    color: #333; /* Warna lebih gelap saat hover */
+}
+
+/* Styling untuk heading (h3) di dalam popup */
+.popup-content h3 {
+    color: #2c2c2c; /* Warna teks hitam gelap */
+    font-size: 28px; /* Ukuran font */
+    margin-bottom: 20px; /* Jarak ke elemen di bawahnya */
+}
+
+/* Styling untuk paragraf di dalam popup */
+.popup-content p {
+    color: #555; /* Warna teks abu-abu sedang */
+    font-size: 16px; /* Ukuran font */
+    line-height: 1.6; /* Tinggi baris untuk readability */
+    margin-bottom: 15px; /* Jarak ke paragraf berikutnya */
+}
+
+/* Menghilangkan margin bawah untuk paragraf terakhir */
+.popup-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media query untuk tablet (layar maksimal 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px; /* Mengurangi padding container */
+    }
+    
+    h1 {
+        font-size: 24px; /* Mengurangi ukuran font heading */
+    }
+    
+    h2 {
+        font-size: 22px; /* Mengurangi ukuran font subheading */
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mengubah grid menjadi 2 kolom */
+        gap: 15px; /* Mengurangi jarak antar kartu */
+    }
+}
+
+/* Media query untuk mobile (layar maksimal 480px) */
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi 1 kolom (vertikal) */
+    }
+}  
