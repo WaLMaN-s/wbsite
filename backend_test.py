@@ -277,7 +277,7 @@ class FeastTicketAPITester:
             self.log_test("Create Booking", False, "No available seats for booking")
             return False
             
-        # Create booking with proper query parameters
+        # Create booking with proper query parameters (multiple seats parameters)
         booking_url = f"bookings?event_id={self.event_id}"
         for seat in available_seats:
             booking_url += f"&seats={seat}"
