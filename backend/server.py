@@ -290,8 +290,8 @@ async def reserve_seats(reservation: SeatReservation, current_user: Dict = Depen
 
 @api_router.post("/bookings", response_model=Booking)
 async def create_booking(
-    event_id: str,
-    seats: List[str],
+    event_id: str = Query(...),
+    seats: List[str] = Query(...),
     current_user: Dict = Depends(get_current_user)
 ):
     # Calculate total price
