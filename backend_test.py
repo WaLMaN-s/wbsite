@@ -277,8 +277,11 @@ class FeastTicketAPITester:
             self.log_test("Create Booking", False, "No available seats for booking")
             return False
             
-        # Create booking
-        booking_url = f"bookings?event_id={self.event_id}&seats={','.join(available_seats)}"
+        # Create booking with proper query parameters
+        booking_url = f"bookings?event_id={self.event_id}"
+        for seat in available_seats:
+            booking_url += f"&seats={seat}"
+            
         success, response = self.run_test(
             "Create Booking",
             "POST",
